@@ -1,7 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 body {
     background-color: #FCF9F5;
     font-family: Montserrat;
+}
+
+.navbar ul li {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+    color: #174964;
+}
+
+.navbar ul li a {
+    color: #174964;
+}
+
+#introduce {
+    font-size: x-large;
+    padding-top: 100px;
+}
+
+#introduce button {
+    width: 20%;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 27px;
+    text-decoration: none;
+    border: none;
+    background-color: #D15E0E;
+    color: #FCF9F5;
 }
