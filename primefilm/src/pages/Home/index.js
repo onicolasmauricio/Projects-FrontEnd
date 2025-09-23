@@ -15,15 +15,24 @@ function Home(){
                 page: 1, 
             }
         })
-            console.log(response.data.results)
+            //console.log(response.data.results.slice(0, 10));
+            setFilmes(response.data.results.slice(0, 10));
         }
 
         loadFilmes(); 
     }, [])
 
     return(
-        <div>
-            <h1>Bem-vindo a página Home</h1>
+        <div className="container">
+            <div className="lista-filmes"> 
+                {filmes.map((filme) => {
+                return(
+                    <article>
+                        <strong>{filme.title}</strong>
+                    </article>
+                )
+            })}
+            </div>
         </div>
     )
 }
