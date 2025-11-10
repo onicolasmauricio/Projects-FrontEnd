@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Link} from 'react-router-dom';
+import './home.css';
 
 // URL DA API: https://api.themoviedb.org/3/movie/now_playing?api_key=5f5ee116a732f1dabd8b46a9e2be297e&language=pt-BR
 
