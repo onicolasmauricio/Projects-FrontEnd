@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import api from '../../services/api';
 import './filme-info.css';
 
 function Filme(){
     const { id } = useParams();
+    const navigation = useNavigate();
+    
     const [filme, setFilme] = useState({});
     const [loading, setLoading] = useState(true);
 
