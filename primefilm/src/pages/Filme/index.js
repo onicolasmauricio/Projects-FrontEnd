@@ -20,9 +20,9 @@ function Filme(){
                 }
             })
             .then((response)=>{ 
-            setLoading(false);
+                setFilme(response.data);
+                setLoading(false);
             })
-
             .catch(()=>{
                 console.log("Filme não encontrado!");
                 navigation("/", {replace: true});
@@ -58,7 +58,7 @@ function Filme(){
         <div className="area-buttons">
             <button>Salvar</button>
             <button>
-                <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title}Trailer`}>Trailer</a>
+                <a target="_blank" rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} Trailer`}>Trailer</a>
             </button>
         </div>
 
