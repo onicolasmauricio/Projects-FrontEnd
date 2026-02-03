@@ -7,7 +7,7 @@ import './filme-info.css';
 function Filme(){
     const { id } = useParams();
     const navigation = useNavigate();
-    
+
     const [filme, setFilme] = useState({});
     const [loading, setLoading] = useState(true);
 
@@ -20,11 +20,13 @@ function Filme(){
                 }
             })
             .then((response)=>{ 
-                setFilme(response.data);
-                setLoading(false);
+            setLoading(false);
             })
+
             .catch(()=>{
-                console.log("Filme não encontrado!")
+                console.log("Filme não encontrado!");
+                navigation("/", {replace: true});
+                return;
             })
         }
 
@@ -33,7 +35,7 @@ function Filme(){
         return() => {
             console.log("Componente desmontado")
         }
-    }, [])
+    }, [navigation, id])
 
     if(loading){
         return( 
@@ -56,7 +58,7 @@ function Filme(){
         <div className="area-buttons">
             <button>Salvar</button>
             <button>
-                <a href="#">Trailer</a>
+                <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title}Trailer`}>Trailer</a>
             </button>
         </div>
 
