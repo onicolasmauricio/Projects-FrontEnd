@@ -13,7 +13,10 @@ useEffect(()=>{
 }, [])
 
 function deleteMovie(id){
-    alert("id clicado " + id)
+    let filterMovies = movies.filter((item) =>{
+        return (item.id !== id)
+    })
+    setMovies(filterMovies);
 }
 
 return(
