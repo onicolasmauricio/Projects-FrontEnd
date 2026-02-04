@@ -12,6 +12,10 @@ useEffect(()=>{
 
 }, [])
 
+function deleteMovie(id){
+    alert("id clicado " + id)
+}
+
 return(
     <div className='my-movies'>
         <h1>Meus filmes</h1>
@@ -23,7 +27,7 @@ return(
                         <span>{item.title}</span>
                         <div>
                             <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                            <button>Excluir</button>
+                            <button onClick={() => deleteMovie(item.id)}>Excluir</button>
                         </div>
                     </li>
                 )
