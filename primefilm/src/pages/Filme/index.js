@@ -46,7 +46,7 @@ function Filme(){
         const hasFilm = movieSaved.some( (movieSaved) => movieSaved.id === filme.id)
         
         if(hasFilm){ 
-            toast.warn("Filme já adicionado a lista")
+            toast.warn("Filme já adicionado a lista!")
             return;
         }
 
