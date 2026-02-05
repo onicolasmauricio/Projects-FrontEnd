@@ -17,12 +17,14 @@ function deleteMovie(id){
         return (item.id !== id)
     })
     setMovies(filterMovies);
+    localStorage.setItem("@primeflix", JSON.stringify(filterMovies))
 }
 
 return(
     <div className='my-movies'>
         <h1>Meus filmes</h1>
 
+        {movies.length === 0 && <span>Você não possui nenhum filme salvo :( </span>}
         <ul>
             {movies.map((item) => { 
                 return(
